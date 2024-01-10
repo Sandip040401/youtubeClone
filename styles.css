@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 60px 0 0 0; /* Add top padding for the fixed navbar */
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+}
+
+.navbar {
+    border: 1px red solid;
+    color: #fff;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 40px; /* Increase the height to make room for the content below */
+    z-index: 1000;
+}
+
+.navbar div {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.sidebar {
+    margin-top: 80px; /* Adjust the margin to make room for the fixed navbar */
+    border: 1px solid green;
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+.main {
+    margin-top: 10px; /* Adjust the margin to make room for the fixed navbar */
+    border: 1px solid purple;
+    margin-left: 200px;
+    height: calc(100vh - 80px); /* Subtract the navbar height from the viewport height */
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-y: auto; /* Add vertical scroll to the main content */
+    max-height: calc(100vh - 80px); /* Limit the max height of the main content */
+}
+
+.card {
+    /* margin-right: 50px; */
+    margin-bottom: 10px;
+    background-color: #f98c8c;
+    padding: 15px;
+    height: 250px;
+    width: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
