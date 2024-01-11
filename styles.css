@@ -9,6 +9,7 @@ body {
 }
 
 .navbar {
+    display: flex;
     border: 1px red solid;
     color: #fff;
     padding: 15px;
@@ -17,12 +18,26 @@ body {
     width: 100%;
     height: 40px; /* Increase the height to make room for the content below */
     z-index: 1000;
+    justify-content: space-between;
 }
+
+.search-bar input{
+    border: 1px gray solid;
+    height: 35px;
+    width: 500px;
+    border-radius: 20px 0 0 20px;
+}
+
+/* .search{
+    border: 2px solid black;
+    border-radius: 0 10px 10px 0;
+} */
 
 .navbar div {
     display: inline-block;
     margin-right: 10px;
 }
+
 
 .sidebar {
     margin-top: 80px; /* Adjust the margin to make room for the fixed navbar */
@@ -36,6 +51,7 @@ body {
 }
 
 .main {
+
     margin-top: 10px; /* Adjust the margin to make room for the fixed navbar */
     border: 1px solid purple;
     margin-left: 200px;
@@ -44,7 +60,7 @@ body {
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     overflow-y: auto; /* Add vertical scroll to the main content */
     max-height: calc(100vh - 80px); /* Limit the max height of the main content */
 }
@@ -52,7 +68,8 @@ body {
 .card {
     /* margin-right: 50px; */
     margin-bottom: 10px;
-    background-color: #f98c8c;
+    /* background-color: #f98c8c; */
+    border-radius: 10px;
     padding: 15px;
     height: 250px;
     width: 350px;
